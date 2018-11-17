@@ -29,3 +29,23 @@ We need to hook ``django-authority`` into our project.
 5. Create ``authority`` database tables by running::
 
      python manage.py migrate
+
+Usage
+-----
+
+After installation we can use object permissions
+with Django_.
+
+Lets start really quickly::
+
+1. Add the following lines to your login function.
+    
+    auth.login(request, user)
+    authority.shortcuts.set_user_permissions(request)
+    
+2. If you need check login and permission you can use the 'login_perm_required' 
+
+    from authority.shortcuts import login_perm_required
+    @login_perm_required(perm_check=True)
+    def index(request):
+        pass
