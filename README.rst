@@ -38,12 +38,12 @@ with Django_.
 
 Lets start really quickly::
 
-1. Add the following lines to your login function.
+1. Add the following lines to your login function::
     
     auth.login(request, user)
     authority.shortcuts.set_user_permissions(request)
     
-2. If you need check login and permission you can use the 'login_perm_required' 
+2. If you need check login and permission you can use the `login_perm_required`::
 
     from authority.shortcuts import login_perm_required
     @login_perm_required(perm_check=True)
