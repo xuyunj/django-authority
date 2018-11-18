@@ -58,7 +58,8 @@ def get_breadcrumb(menus, current_menu ):
  
         if not position_tag:
             return
-            
+        
+        child_menus = []
         id = position_tag[0]
         if isinstance(mark_menus, dict):      # parent menu
             mark_menus[id]['status'] = True
