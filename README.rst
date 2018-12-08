@@ -1,3 +1,10 @@
+Installation
+------------
+
+To install ``django-authority`` simply run::
+
+    python2.7 setup.py install
+   
 Configuration
 -------------
 
